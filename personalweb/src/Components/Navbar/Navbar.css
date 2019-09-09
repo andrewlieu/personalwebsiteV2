@@ -1,0 +1,55 @@
+.button-container{
+    position: fixed;
+    justify-content: center;
+    width: 2%;
+    height: 100%;
+    z-index: 1000;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+
+}
+.a-button{
+    height:10vh;
+    background: transparent;
+}
+
+.navbar-button{
+
+    display: flex;
+    margin: 3vh 0 3vh ;
+    background: transparent;
+padding:0;
+    opacity: .7;
+    text-decoration: none;
+    position:fixed;
+}
+
+.hiddenText{
+    background: white;
+    margin-left:0.5vw;
+    font-weight: bolder;
+    color:black;
+    width: auto;
+    font-size:20px;
+    position: relative;
+    text-align: center;
+    opacity:1;
+    transition:0.5s;
+    letter-spacing: 0.3vw;
+}
+
+
+.hiddenText:hover{
+    margin-left:1vw;
+    letter-spacing: 0.5vw;
+}
+
+
+button:hover{opacity:.8;}
+button:focus{
+    outline:none;
+}
+button:active{
+opacity: .9;
+}

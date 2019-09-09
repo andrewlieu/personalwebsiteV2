@@ -1,0 +1,31 @@
+.struct{
+  height: auto;
+  width: auto;
+  display: block;
+  overflow:scroll;
+  -webkit-user-select: none;
+  background:transparent;
+  
+
+}
+::-webkit-scrollbar { 
+  display: none; 
+}
+
+html{
+  scroll-behavior: smooth;
+}
+a{
+  height: auto;
+  width: auto;
+  margin-left: 0;
+  padding: 0;
+  text-decoration: none;
+}
+a:focus {
+  display: none;
+}
+
+input:focus {
+  display:none;
+}
