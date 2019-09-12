@@ -1,22 +1,15 @@
-import React, {Component} from 'react';
-import './sidebutton.css'
+import React, { Component } from "react";
+import "./sidebutton.css";
 class sidebutton extends Component {
-  consturctor(props) {
-    this.state ={
-
-    }
+  consturctor(props) {}
+  render() {
+    return (
+      <a href={this.props.theLink} className="a-button">
+        <button className="navbar-button">
+          <div className="hiddenText">{this.props.theText}</div>
+        </button>
+      </a>
+    );
   }
-    render () {
-  return (
-        <a href={this.props.theLink} className="a-button">
-          <button className="navbar-button">
-            <div className="hiddenText">{this.props.theText}</div>
-          </button>
-        </a>
-
-
-    
-  );
-}
 }
 export default sidebutton;

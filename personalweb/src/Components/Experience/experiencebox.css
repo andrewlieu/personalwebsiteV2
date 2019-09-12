@@ -1,22 +1,52 @@
-.experience-box-container{
-    width: 200px;
-    height: 200px;
-    background-image: linear-gradient(to top, rgba(252, 182, 193, .5), rgba(150, 161, 181,.5));
-    margin: 5vh 5vw 0 5vw;
-    display: inline-flex;
-    align-content: space-between;
+.experience-box-container {
+  width: 200px;
+  height: 200px;
+  background: #56ffbe;
+  border-radius: 50%;
+  -webkit-animation: backgroundColorChange 10s infinite;
+  margin: 5vh 3vw 0 5vw;
+  display: inline-flex;
+  align-content: space-between;
+  text-align: center;
 }
-.experience-box-container:hover{
-    background:rgba(255,255,255,.2);
+.description {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  margin-top: 40%;
+  text-align: center;
+  justify-content: center;
+}
 
+.experience-box-container:hover {
+  background: rgba(255, 255, 255, 0.2);
 }
-.experience-box-container:active{
-    background:rgba(255,255,255,.3);
+.experience-box-container:active {
+  background: rgba(255, 255, 255, 0.3);
 }
-.experience-image{
-    max-width:100%;
-    max-height:100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.experience-image {
+  max-width: 100%;
+  max-height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@keyframes backgroundColorChange {
+  0% {
+    font-weight: bold;
+    background-color: #56ffbe;
+  }
+  33% {
+    font-weight: bold;
+    background-color: #ff9a56;
+  }
+  66% {
+    font-weight: bold;
+    background-color: #ff5678;
+  }
+  100% {
+    font-weight: bold;
+    background-color: #56ffbe;
+  }
 }

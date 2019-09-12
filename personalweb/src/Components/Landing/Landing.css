@@ -1,147 +1,270 @@
-.landingPage {
-
-    background-image: url('blossom.jpg');
-    height:150%;
-    width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    left: 0;
-    top: 0;
-    position: absolute;
-    animation:slide 20s infinite;
-    -webkit-animation: slide 20s infinite;
-    padding:0;
-    line-height: 80px;
-    display:block;
-    float: none;
-    z-index: -1;
-    overflow:hidden;
-    overflow-x: hidden;
-    background-attachment: fixed;
-
+.spacingButton {
+  margin-left: 2vw;
+  margin-right: 2vw;
 }
-.locateAboutMe{
-    position:absolute;
-    top:90vh;
-    height:1px;
-    width:1px;
 
+.complement {
+  -webkit-animation: colorChange 10s infinite;
+  animation-timing-function: linear;
 }
+
+.moon {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url(moon.png);
+  position: absolute;
+  width: 20%;
+  height: 40%;
+  bottom: -40vh;
+  right: 0vw;
+  opacity: 1;
+  padding: 0;
+
+  -webkit-animation: moonrise 20s infinite;
+  -webkit-animation-timing-function: linear;
+}
+
+@keyframes moonrise {
+  0% {
+    opacity: 0.3;
+
+    transform: rotate(-360deg) translate(50vw) rotate(360deg);
+  }
+  100% {
+    opacity: 0.3;
+
+    transform: rotate(0deg) translate(50vw) rotate(0deg);
+  }
+}
+@keyframes colorChange {
+  0% {
+    font-weight: bold;
+    color: #56ffbe;
+  }
+  33% {
+    font-weight: bold;
+    color: #ff9a56;
+  }
+  66% {
+    font-weight: bold;
+    color: #ff5678;
+  }
+  100% {
+    font-weight: bold;
+    color: #56ffbe;
+  }
+}
+@keyframes backgroundColorChange {
+  0% {
+    font-weight: bold;
+    background-color: #56ffbe;
+  }
+  33% {
+    font-weight: bold;
+    background-color: #ff9a56;
+  }
+  66% {
+    font-weight: bold;
+    background-color: #ff5678;
+  }
+  100% {
+    font-weight: bold;
+    background-color: #56ffbe;
+  }
+}
+
+.red {
+  color: #bd4629;
+  font-weight: bold;
+}
+.describe {
+  position: relative;
+  font-family: "Karla", sans-serif;
+  font-size: 30px;
+  margin: 5vh;
+  color: white;
+  z-index: 1;
+  -webkit-animation: slide 3s;
+  animation-fill-mode: forwards;
+  left: -100vw;
+}
+
+.delay0 {
+  -webkit-animation-delay: 1.5s;
+}
+.delay1 {
+  -webkit-animation-delay: 3s;
+}
+.delay2 {
+  -webkit-animation-delay: 4.5s;
+}
+.delay3 {
+  -webkit-animation-delay: 6s;
+}
+.delay4 {
+  -webkit-animation-delay: 7.5s;
+}
+.circle {
+  width: 60vw;
+  height: 100vh;
+  border-radius: 50%;
+  color: white;
+  background-color: white;
+  position: absolute;
+  right: -20vw;
+  bottom: -50vh;
+  width: -50vw;
+  z-index: 1;
+  -webkit-animation: backgroundColorChange 10s infinite, slideFromRight 3s;
+}
+
 .socialmedia {
-    background-position: center;
-    background-size: cover;
-    height: 8%;
-    width: 5%;
+  background-position: center;
+  background-size: cover;
+  height: 8%;
+  width: 5%;
 }
-button{border: none;
-display: block;}
+button {
+  border: none;
+  display: block;
+}
 
-.container{
-    width: 100vw;
-    height: 100vh;
-    display: block;
-    text-align: center;
+.container {
+  background: black;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
 }
-.sm-container{
-    margin-top:1%;
-    -webkit-animation: fadein 4s;
+.sm-container {
+  background: transparent;
+  position: absolute;
+  bottom: 5vh;
+  right: 10vw;
+  margin-top: 5%;
+  -webkit-animation: fadein 4s;
+  -webkit-animation-delay: 9s;
+  visibility: hidden;
+  animation-fill-mode: forwards;
+  z-index: 10;
+}
+.linkedinButton {
+  background: transparent;
 
-}
-.linkedinButton{
-    width: 50px;
-    height: 50px;
-    opacity:.9;
+  width: 50px;
+  height: 50px;
+  opacity: 0.8;
 }
 .linkedinButton:hover {
-    opacity:1;
+  opacity: 1;
 }
 
-.instaButton{
-    width: 50px;
-    height: 50px;
+.instaButton {
+  width: 50px;
+  height: 50px;
 }
-.whiteContainer{
-    font-size: 70px;
-    font-weight: bolder;
-    text-align: center;
-    color:transparent;
-    -webkit-text-stroke-width: 3px;
-    -webkit-text-stroke-color: white;
-    animation: backgroundchange 20s infinite;
-    -webkit-animation:backgroundchange 20s infinite;
-    -webkit-user-select: none;
-    display: inline-flex;
-    align-items: center;
-    height: auto;
-    margin:20% auto 0 auto;
-    width: auto;
-    padding: 1% 3% 1% 3%;
-    background-image: linear-gradient(to right, rgba(235, 222, 234,.7), rgba(188, 218, 244,.7));
+.title {
+  position: relative;
+  z-index: 10;
+  font-size: 65px;
+  font-weight: bolder;
+  color: white;
+  letter-spacing: 10px;
+  -webkit-user-select: none;
+  display: inline-flex;
+  height: auto;
+  width: auto;
+  font-family: "Rubik", sans-serif;
+  padding: 3% 0 8vh 5vh;
+  -webkit-animation: slideFromTop 3s, colorChange 10s infinite;
+  animation-fill-mode: forwards;
+}
+.subtext {
+  font-size: 50px;
+}
 
+@keyframes slideFromTop {
+  0% {
+    left: 0;
+    transform: translateY(-100vh);
+  }
+  65% {
+    left: 0;
+
+    transform: translateY(3vh);
+  }
+  100% {
+    left: 0;
+
+    transform: translateY(0vh);
+  }
 }
-.subtext{
-    font-size: 50px;
+
+@-webkit-keyframes slideFromTop {
+  0% {
+    left: 0;
+
+    transform: translateY(-100vh);
+  }
+  65% {
+    left: 0;
+
+    transform: translateY(3vh);
+  }
+
+  100% {
+    left: 0;
+
+    transform: translateY(0vh);
+  }
 }
 
 @keyframes fadein {
-    from {opacity: 0;}
-    to {opacity: 1;}
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
 }
 
-
 @-webkit-keyframes fadein {
-    from {opacity: 0;}
-    to {opacity: 1;}
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slide {
+  0% {
+    transform: translateX(-100vw);
+  }
+  65% {
+    transform: translateX(1vw);
+  }
+  100% {
+    transform: translateX(0vw);
+  }
 }
 
 @keyframes slide {
-    0% {
-        background-image:url('blossom.jpg')
-    }
-    33% {
-        background-image:url('blossom2.jpg')
-
-    }
-    67% {
-        background-image:url('blossom3.jpg')
-    }
-}
-@-webkit-keyframes slide {
-    0% {
-        background-image:url('blossom.jpg')
-    }
-    33% {
-        background-image:url('blossom2.jpg')
-
-    }
-    67% {
-        background-image:url('blossom3.jpg')
-    }
-}
-
-@keyframes backgroundchange {
-    0% {
-        background-image: linear-gradient(to right, rgba(235, 222, 234,.7), rgba(188, 218, 244,.7));
-    }
-    33% {
-        background-image: linear-gradient(to top, rgba(190,199,254,.7), rgba(157,215,252,.7));
-
-    }
-    67%{
-        background-image: linear-gradient(to top, rgba(202,201,207,.7), rgba(227,207,208,.7));
-    }
-}
-
-@-webkit-keyframes backgroundchange {
-    0% {
-        background-image: linear-gradient(to right, rgba(235, 222, 234,.7), rgba(188, 218, 244,.7));
-    }
-    33% {
-        background-image: linear-gradient(to top, rgba(190,199,254,.7), rgba(157,215,252,.7));
-
-    }
-    67%{
-        background-image: linear-gradient(to top, rgba(202,201,207,.7), rgba(227,207,208,.7));
-    }
+  0% {
+    transform: translateX(-100vw);
+    left: 0;
+  }
+  65% {
+    transform: translateX(3vw);
+    left: 0;
+  }
+  100% {
+    transform: translateX(0vw);
+    left: 0;
+  }
 }

@@ -1,18 +1,18 @@
-import React, {Component} from 'react';
-import './experiencebox.css';
+import React, { Component } from "react";
+import "./experiencebox.css";
 class experiencebox extends Component {
   constructor(props) {
     super(props);
-  this.state = {
-      
-    }
+    this.state = {};
   }
-  render () {
-  return (
-    <div className="experience-box-container">
-        <img src={this.props.image} className="experience-image"></img>
-    </div>
-  );
-}
+  render() {
+    return (
+      <div>
+        <div className="experience-box-container">
+          <div className="description">{this.props.image}</div>
+        </div>
+      </div>
+    );
+  }
 }
 export default experiencebox;
